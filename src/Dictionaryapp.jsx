@@ -52,6 +52,7 @@ export default class Dictionary extends Component
                         value ={null}
                         name = "searchword"
                         onChange = {this.handleInput}/>
+                        <button>SEARCH</button>
                 </form>
                 <br/><br/>
                 <div className="searchresults"><p>{this.state.searchresult}</p></div>
