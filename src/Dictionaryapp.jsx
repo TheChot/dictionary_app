@@ -15,7 +15,7 @@ export default class Dictionary extends Component
 
     handleInput = (e) =>{
         const name = e.target.name;
-        const DictionaryJSON = require("./Dictionary.json");
+        // const DictionaryJSON = require("./Dictionary.json");
         // const DictionarySTRING = JSON.stringify(DictionaryJSON); 
         // const DictionaryData = JSON.parse(DictionarySTRING);
 
@@ -27,15 +27,32 @@ export default class Dictionary extends Component
 
         //var searchItem = this.state.searchresult;
 
-        this.setState({
-            searchresult: JSON.stringify(DictionaryJSON)
-        })
+        // this.setState({
+        //     searchresult: JSON.stringify(DictionaryJSON)
+        // })
         
-        console.log(this.state.searchresult)
-        console.log(DictionaryJSON);
+        // console.log(this.state.searchresult)
+        // console.log(DictionaryJSON);
         //console.log (searchItem);
         // console.log(DictionarySTRING);
         // console.log(DictionaryData);
+    }
+
+    onSearch = () => 
+    {
+       
+        const DictionaryJSON = require("./Dictionary.json");
+       // const DictionarySTRING = JSON.stringify(DictionaryJSON);
+       
+        const searchItem = this.state.searchword;
+
+        this.setState({
+            searchresult: JSON.stringify(DictionaryJSON[searchItem])
+        })
+
+        console.log(this.state.searchresult)
+        //console.log(DictionaryJSON);
+        console.log (searchItem);
     }
 
    
@@ -43,7 +60,7 @@ export default class Dictionary extends Component
     render()
     {
         return(
-            <div>
+            <div >
                 <form action="">
                     <input 
                         type="text" 
@@ -52,10 +69,10 @@ export default class Dictionary extends Component
                         value ={null}
                         name = "searchword"
                         onChange = {this.handleInput}/>
-                        <button>SEARCH</button>
+                        
                 </form>
                 <br/><br/>
-                <div className="searchresults"><p>{this.state.searchresult}</p></div>
+                <div className="searchresults" onClick ={this.onSearch}><p>{this.state.searchresult}</p></div>
             </div>
         )
     }
