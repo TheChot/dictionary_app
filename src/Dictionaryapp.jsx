@@ -1,23 +1,45 @@
 import React, { Component } from 'react';
 
+
 export default class Dictionary extends Component
 {
     constructor()
     {
         super();
         this.state ={
-            searchword : ''
+            searchword : '',
+            searhresult: ''
+            
         }
     }
 
     handleInput = (e) =>{
-        //const name = e.value.name;
+        const name = e.target.name;
+        const DictionaryJSON = require("./Dictionary.json");
+        // const DictionarySTRING = JSON.stringify(DictionaryJSON); 
+        // const DictionaryData = JSON.parse(DictionarySTRING);
 
         this.setState({
-            //[name] : e.target.value
-            searchword : e.target.value
+            [name] : e.target.value,
+            //searchresult: DictionaryData[this.state.searchword]
+            //searchword : e.target.value
         })
+
+        //var searchItem = this.state.searchresult;
+
+        this.setState({
+            searchresult: JSON.stringify(DictionaryJSON)
+        })
+        
+        console.log(this.state.searchresult)
+        console.log(DictionaryJSON);
+        //console.log (searchItem);
+        // console.log(DictionarySTRING);
+        // console.log(DictionaryData);
     }
+
+   
+
     render()
     {
         return(
@@ -32,7 +54,7 @@ export default class Dictionary extends Component
                         onChange = {this.handleInput}/>
                 </form>
                 <br/><br/>
-                <div className="searchresults"><p>{this.state.searchword}</p></div>
+                <div className="searchresults"><p>{this.state.searchresult}</p></div>
             </div>
         )
     }

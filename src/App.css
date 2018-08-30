@@ -4,10 +4,12 @@
   /* display: none; */
   background-color: lightgray;
   padding:20px;
+  font-size: 40px;
 }
 
 .searchresults
 {
   background-color: lightgrey;
   padding: 40px;
+  font-size: 40px;
 }
