@@ -39,9 +39,9 @@ export default class Dictionary extends Component
         // console.log(DictionaryData);
     }
 
-    onSearch = () => 
+    onSearch = (e) => 
     {
-       
+       e.preventDefault();
         const DictionaryJSON = require("./Dictionary.json");
        // const DictionarySTRING = JSON.stringify(DictionaryJSON);
        
@@ -64,10 +64,11 @@ export default class Dictionary extends Component
     {
         return(
             <div >
-                <form action="">
+
+                <form action="" onSubmit={this.onSearch}>
                     <input 
                         type="text" 
-                        placeholder="SEARCH FOR A WORD" 
+                        placeholder="WHAT WORD ARE YOU LOOKING FOR?" 
                         className="searchbar" 
                         value ={null}
                         name = "searchword"
