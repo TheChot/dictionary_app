@@ -1,0 +1,13 @@
+.searchbar
+{
+  width: 100%;
+  /* display: none; */
+  background-color: lightgray;
+  padding:20px;
+}
+
+.searchresults
+{
+  background-color: lightgrey;
+  padding: 40px;
+}
