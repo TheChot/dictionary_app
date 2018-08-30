@@ -1,16 +1,44 @@
+
+
 .searchbar
 {
   width: 100%;
   /* display: none; */
-  background-color: lightgray;
+  background-color: #cccccc;
   padding:20px;
   font-size: 40px;
   text-transform: uppercase;
+  
+  margin: 0;
 }
 
 .searchresults
 {
-  background-color: lightgrey;
+  background-color: #cccccc;
   padding: 40px;
   font-size: 40px;
+  margin: 0;
+  
+}
+.searchIcon
+{
+  text-align: center;
+  background-color: #cacaca;
+  padding: 10px;
+  font-size: 40px;
+  color: #9b9b9b;
+  margin: 10px 0px 10px 0px;
+}
+.searchIcon:hover
+{
+  text-align: center;
+  background-color: #8d8d8d;
+  padding: 10px;
+  font-size: 40px;
+  color: #e7dfdd;
+  cursor: pointer;
+}
+body
+{
+  background-color: #e7dfdd;
 }

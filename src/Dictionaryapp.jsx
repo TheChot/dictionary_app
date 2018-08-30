@@ -8,7 +8,8 @@ export default class Dictionary extends Component
         super();
         this.state ={
             searchword : '',
-            searhresult: ''
+            searhresult: '',
+            searchItem:''
             
         }
     }
@@ -47,7 +48,9 @@ export default class Dictionary extends Component
         const searchItem = this.state.searchword.toUpperCase();
 
         this.setState({
-            searchresult: JSON.stringify(DictionaryJSON[searchItem])
+            searchresult: JSON.stringify(DictionaryJSON[searchItem]),
+            searchItem:this.state.searchword
+
         })
 
         console.log(this.state.searchresult)
@@ -71,9 +74,13 @@ export default class Dictionary extends Component
                         onChange = {this.handleInput}/>
                         
                 </form>
-                <br/><br/>
-                <div className="searchresults" onClick ={this.onSearch}><p>{this.state.searchresult}</p></div>
+                <p className="searchIcon" onClick ={this.onSearch}>SEARCH</p>
+                
+                <div className="searchresults" > 
+                    <h4>{this.state.searchItem}</h4> 
+                    <p>{this.state.searchresult}</p>
+                </div>
             </div>
         )
     }
-}
+}margin: 0;
