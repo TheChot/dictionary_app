@@ -20,7 +20,7 @@ export default class Dictionary extends Component
         // const DictionaryData = JSON.parse(DictionarySTRING);
 
         this.setState({
-            [name] : e.target.value.toUppercase(),
+            [name] : e.target.value
             //searchresult: DictionaryData[this.state.searchword]
             //searchword : e.target.value
         })
@@ -44,7 +44,7 @@ export default class Dictionary extends Component
         const DictionaryJSON = require("./Dictionary.json");
        // const DictionarySTRING = JSON.stringify(DictionaryJSON);
        
-        const searchItem = this.state.searchword;
+        const searchItem = this.state.searchword.toUpperCase();
 
         this.setState({
             searchresult: JSON.stringify(DictionaryJSON[searchItem])
