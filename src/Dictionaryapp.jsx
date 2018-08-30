@@ -20,7 +20,7 @@ export default class Dictionary extends Component
         // const DictionaryData = JSON.parse(DictionarySTRING);
 
         this.setState({
-            [name] : e.target.value,
+            [name] : e.target.value.toUppercase(),
             //searchresult: DictionaryData[this.state.searchword]
             //searchword : e.target.value
         })
