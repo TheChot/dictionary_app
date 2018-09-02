@@ -73,7 +73,7 @@ export default class Dictionary extends Component
                 <form action="" onSubmit={this.onSearch}>
                     <input 
                         type="text" 
-                        placeholder="WHAT WORD ARE YOU LOOKING FOR?" 
+                        placeholder="TYPE HERE TO SEARCH?" 
                         className="searchbar" 
                         value ={null}
                         name = "searchword"
