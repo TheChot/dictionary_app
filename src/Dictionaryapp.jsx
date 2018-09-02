@@ -1,3 +1,8 @@
+/*
+*Author= Chota Herrick Mpuku
+*Dictionary App Assignment
+
+*/
 import React, { Component } from 'react';
 
 
@@ -84,4 +89,4 @@ export default class Dictionary extends Component
             </div>
         )
     }
-}margin: 0;
+}

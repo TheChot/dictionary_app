@@ -1,46 +1,57 @@
-
+@keyframes searchbarAnim 
+{
+  from {background-color: #f0c7a4}
+  to {background-color: #a06440}
+}
 
 .searchbar
 {
   width: 100%;
   /* display: none; */
-  background-color: #cccccc;
+  background-color: #f0c7a4;
   padding:20px;
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  border: none;
 }
 
 .searchresults
 {
-  background-color: #cccccc;
+  background-color: #f0c7a4;
   height: 60%;
   font-size: 40px;
   margin: 0;
+  color: #5e2d14;
+  
   
 }
 .searchIcon
 {
   text-align: center;
-  background-color: #cacaca;
+  background-color: #f0c7a4;
   padding: 10px;
   font-size: 40px;
-  color: #9b9b9b;
-  margin: 10px 0px 10px 0px;
+  color: #e7dfdd;
+  margin: 30px 0px 20px 0px;
+ 
 }
 .searchIcon:hover
 {
   text-align: center;
-  background-color: #8d8d8d;
+  background-color: #a06440;
   padding: 10px;
   font-size: 40px;
   color: #e7dfdd;
   cursor: pointer;
+  box-shadow: 3px 5px;
+  animation-name: searchbarAnim;
+  animation-duration: 500ms; 
 }
 body
 {
-  background-color: #e7dfdd;
+  background-color: #ad8569;
 }
 
 .title
@@ -48,5 +59,13 @@ body
   text-decoration: underline;
   text-align: center;
   font-size: 50px;
-  color: grey;
+  color: whitesmoke;
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #000;
+}
+.titleBar
+{
+  background-image: url('./books-banner.jpg');
+  padding: 40px 0px 40px 0px;
 }
